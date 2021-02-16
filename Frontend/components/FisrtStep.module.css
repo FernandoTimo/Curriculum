@@ -1,0 +1,97 @@
+.FisrtStep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vh;
+  transition: 0.3s;
+}
+.ProfileContainer {
+  width: 30vh;
+  height: 30vh;
+  background: #fa0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+}
+.ImageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.Image {
+  /* width: 100%; */
+  /* height: 100%; */
+  object-fit: cover;
+}
+.InfoContainer {
+  margin: 15vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.Title {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 3vh;
+}
+.Atribucion {
+  padding-left: 1vh;
+  color: #dedede;
+}
+.Locacion {
+  color: #111;
+  font-weight: 700;
+  font-size: 2em;
+  transition: 0.5s;
+}
+.StateContainer {
+  pointer-events: none;
+  position: absolute;
+  width: 30vh;
+  height: 30vh;
+  /* background: #fa0; */
+  /* border: 0.2vh solid #fa0; */
+  border-radius: 50%;
+  transition: 0.8s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.State {
+  color: #fff;
+  width: 16vh;
+  text-align: center;
+  background: #033;
+  border: 0.5vh solid springgreen;
+  font-weight: 700;
+  font-size: 1.5vh;
+  padding: 1vh;
+  border-radius: 2vh;
+  transition: 0.8s ease-out;
+  transform: rotateZ(-120deg);
+}
+.SecondStep {
+  transition: 0.3s;
+}
+.Bienvenida {
+  font-size: 10vw;
+  font-weight: 700;
+  transition: 0.3s;
+}
+@media only screen and (min-width: 600px) {
+  .Bienvenida {
+    font-size: 8vw;
+    font-weight: 700;
+  }
+}

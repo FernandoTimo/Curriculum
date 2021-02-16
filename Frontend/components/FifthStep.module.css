@@ -1,0 +1,501 @@
+.FifthStep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.ModalBox {
+  width: 35vh;
+  height: 30vh;
+  background: #fff;
+  border-radius: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 1.5vh #0003;
+  flex-direction: column;
+  gap: 1vh;
+  overflow: hidden;
+}
+.WhatsAppChatContainer {
+  width: 100%;
+  height: 100%;
+  flex: 3;
+  background: #f7f2e8;
+  display: flex;
+  flex-direction: column;
+}
+.PhoneHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.PhoneHeader > time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6vh;
+  padding-top: 0.5vh;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  pointer-events: none;
+}
+.PhoneHeader * {
+  flex: 1;
+}
+.PhoneHeader span {
+  flex: 2;
+  align-self: flex-start;
+  height: 2.5vh;
+  border-radius: 0 0 2vh 2vh;
+  background: #fff;
+}
+.PhoneHeader div img {
+  height: 1.3vh;
+}
+.WhatsAppHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.WhatsAppBack {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.WhatsAppBack:hover {
+  opacity: 0.7;
+}
+.WhatsAppBack:active {
+  opacity: 1;
+}
+.WhatsAppBack img {
+  height: 1.5vh;
+}
+.WhatsAppChatContainer header {
+  background: #f2f2f2;
+  border-bottom: 1px solid #dadada;
+  flex: 1;
+}
+.WhatsAppUserImage {
+  width: 3vh;
+  height: 3vh;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.WhatsAppUserImage img {
+  width: 3vh;
+  object-fit: cover;
+}
+.WhatsAppUserInfo {
+  flex: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+  padding: 0.8vh 0;
+}
+.WhatsAppUserContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 10;
+}
+.WhatsAppUserContainer label {
+  font-weight: 500;
+  font-size: 1.5vh;
+  color: #000;
+}
+.WhatsAppUserContainer span {
+  font-size: 1.2vh;
+  color: #555;
+}
+.WhatsAppMeet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  flex: 10;
+}
+.WhatsAppMeet img:nth-child(1) {
+  width: 2.3vh;
+}
+.WhatsAppMeet img {
+  width: 2vh;
+}
+.WhatsAppChat {
+  flex: 3;
+  /* background: linear-gradient(-205deg, #f7f2e8, #efe5dd); */
+  background: linear-gradient(-205deg, #033, #022);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.WhatsAppChat > div {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.WallPaper {
+  position: absolute;
+  overflow: hidden;
+  /* width: 35vh;
+  height: 14vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.WallPaper img {
+  object-fit: cover;
+}
+.WhatsAppChat > div > span {
+  background: #d5dfff;
+  font-size: 1.3vh;
+  line-height: 1.3vh;
+  padding: 0.2vh 0.9vh;
+  border-radius: 0.8vh;
+  color: #555;
+  font-weight: 600;
+  margin-top: 0.5vh;
+}
+.WhatsAppMessages {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-self: flex-end;
+  height: 100%;
+  margin: 0;
+}
+.WhatsAppMessage {
+  display: flex;
+  padding: 0.1vh;
+  gap: 1vh;
+}
+.WhatsAppMessage > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2vh 0.8vh;
+  background: #c5ffae;
+  border-radius: 0.7vh;
+  box-shadow: 0 0 0.5vh #0002;
+  gap: 1.5vh;
+}
+.WhatsAppMessage div p {
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5vh;
+  line-height: 1.5vh;
+}
+.WhatsAppMessage div div {
+  height: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vh;
+}
+.WhatsAppMessage div div > time {
+  position: relative;
+  font-size: 1.3vh;
+  /* line-height: 1.3vh; */
+  padding: 0;
+  color: #0007;
+  margin: 0;
+}
+.WhatsAppMessage div div span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.WhatsAppMessage div div span img {
+  height: 1vh;
+  opacity: 0.3;
+  display: flex;
+}
+.WhatsAppForm {
+  flex: 1;
+  background: #f2f2f2;
+  border-top: 1px solid #dadada;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.WhatsAppForm > label {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.5vh;
+  line-height: 1.5vh;
+  width: 100%;
+  height: 100%;
+  color: #1f6feb;
+  font-weight: 600;
+}
+.WhatsAppForm > div {
+  flex: 3;
+  display: flex;
+  align-items: flex-start;
+}
+.WhatsAppForm div input {
+  width: 21vh;
+  height: 4vh;
+  font-size: 2vh;
+  line-height: 2vh;
+  border: none;
+  letter-spacing: 0.5vh;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+}
+.InputNumber {
+  position: absolute;
+  width: 21vh;
+  height: 3.5vh;
+  border-bottom: 3px solid #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.GitHub {
+  width: 3vh;
+}
+.TemplateRepository {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.TemplateTitle {
+  font-size: 2vh;
+  font-weight: 700;
+  text-shadow: 0 0 0.5vh #0003;
+}
+.TemplateInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.5vh;
+}
+.TemplateLanguaje {
+  /* display: flex; */
+  font-weight: 700;
+  font-size: 1.3vh;
+  color: #333;
+  justify-self: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.TemplateLanguaje::before {
+  content: '';
+  width: 1vh;
+  height: 1vh;
+  border-radius: 50%;
+  position: absolute;
+  align-self: center;
+  background: gold;
+  margin-left: -1.5vh;
+}
+.TemplateSpan {
+  border: 0.3vh solid #1f6feb;
+  color: #1f6feb;
+  font-weight: 700;
+  line-height: 1.8vh;
+  padding: 0 0.7vh;
+  border-radius: 0.8vh;
+  font-size: 1.3vh;
+}
+.TemplateDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh 0;
+  padding: 0 1vh;
+  border-radius: 0.5vh;
+  height: 25%;
+  width: 75%;
+  font-size: 1.2vh;
+  color: #586069;
+  border: 0.2vh solid #ddd;
+}
+.WebState {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Contact {
+  flex: 15;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  gap: 3vh;
+}
+.Contact h2 {
+  font-size: 5vh;
+  margin: 2.5vh 0;
+}
+.ContactContainer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ContactBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 0.4vh solid #111;
+  min-width: 55vh;
+  border-radius: 2vh;
+  height: 8vh;
+}
+.ContactBox a {
+  font-size: 3.5vh;
+  text-decoration: none;
+  font-style: normal;
+  color: #333;
+  font-weight: 700;
+}
+.ContactBox label {
+  background: #fff;
+  padding: 0.5vh 0.8vh;
+  font-weight: 700;
+  font-size: 2vh;
+  color: #222;
+  font-style: normal;
+}
+.Contact span {
+  opacity: 0;
+}
+.Contact > label {
+  margin: 2vh 0;
+  width: 35vh;
+  background: #333;
+  height: 0.21vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.8vh;
+  /* background:  #fff; */
+}
+.Contact > label abbr {
+  background: #fff;
+  width: 2vh;
+  height: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8vh;
+}
+.Contact button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #033;
+}
+.Contact button:hover {
+  color: #255;
+}
+.Contact button:hover > b {
+  color: #033;
+  transition: 0.3s;
+}
+.Contact button b img {
+  transition: 0.1s;
+}
+.Contact button:hover > b img {
+  color: #033;
+  filter: grayscale(0.4) brightness(0.3);
+}
+.Contact button b {
+  color: #45ebc2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Contact button b img {
+  width: 2vh;
+  margin: 0 0.5vh;
+}
+.ContactTipe {
+}
+.DownloadTemplate {
+  background: transparent;
+  border: none;
+  font-size: 1.5vh;
+  color: #586069;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s;
+  padding: 1vh 2vh;
+  text-decoration: underline;
+}
+.DownloadTemplate:hover {
+  opacity: 0.8;
+}
+.PageInfo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.FooterContainer {
+  clear: both;
+  position: relative;
+  width: 80vw;
+  border-top: 0.2vh solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: flex-end !important;
+  justify-self: flex-end !important;
+  padding: 1vh 0;
+}
+.FooterContainer label {
+  font-size: 1.3vh;
+  color: #555;
+}
+.FooterContainer label a {
+  color: #ff7b7b;
+  transition: 0.3s;
+}
+.FooterContainer label a:hover {
+  color: #ff6868;
+  text-decoration: underline;
+}
