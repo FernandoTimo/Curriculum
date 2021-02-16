@@ -389,7 +389,6 @@
   font-weight: 700;
 }
 .ContactBox label {
-  background: #fff;
   padding: 0.5vh 0.8vh;
   font-weight: 700;
   font-size: 2vh;
@@ -408,12 +407,10 @@
   justify-content: center;
   align-items: center;
   line-height: 1.8vh;
-  /* background:  #fff; */
 }
 .Contact > label abbr {
-  background: #fff;
-  width: 2vh;
-  height: 2vh;
+  width: 3vh;
+  height: 3vh;
   display: flex;
   justify-content: center;
   align-items: center;

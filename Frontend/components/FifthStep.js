@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import { useTheme } from 'hooks/useTheme';
+import { useContext, useState } from 'react';
 import style from './FifthStep.module.css';
 import { Modal } from './Resources/Timoideas';
+
 function FifthStep() {
   const [viewState, setviewState] = useState(1);
   const [WhatsAppUserNumber, setWhatsAppUserNumber] = useState('FernandoTimo');
   const [WhatsAppUserName, setWhatsAppUserName] = useState(false);
   const [ModalTemplate, setModalTemplate] = useState(false);
+  const { Theme } = useTheme();
   const toggleModalTemplate = () => {
     setModalTemplate(!ModalTemplate);
   };
@@ -187,17 +190,23 @@ function FifthStep() {
         <div className={style.ContactContainer}>
           <address className={style.ContactBox}>
             <span>Enviar Correo</span>
-            <a href="mailto:fertimo99@gmail.com">timoideas@hotmail.com</a>
+            <a href="mailto:fertimo99@gmail.com" style={{ color: Theme._15 }}>
+              timoideas@hotmail.com
+            </a>
             <label className={style.ContactTipe}>Correo</label>
           </address>
         </div>
         <address className={style.ContactBox}>
           <span>Llamar</span>
-          <a href="tel:+51983443031">+51 983443031</a>
+          <a href="tel:+51983443031" style={{ color: Theme._15 }}>
+            +51 983443031
+          </a>
           <label>Teléfono</label>
         </address>
         <label>
-          <abbr>o</abbr>
+          <abbr style={{ color: Theme._15, backgroundColor: Theme._00 }}>
+            o
+          </abbr>
         </label>
         <button
           onClick={() => {
