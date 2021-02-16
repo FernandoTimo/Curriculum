@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import style from './FisrtStep.module.css';
-import SecondStep from './SecondStep';
 function FisrtStep() {
   const [firstStep, setfirstStep] = useState(true);
   const [secondStep, setsecondStep] = useState(false);
