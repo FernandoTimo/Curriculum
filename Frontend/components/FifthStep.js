@@ -188,22 +188,35 @@ function FifthStep() {
       <div className={style.Contact}>
         <h2>Contacto</h2>
         <div className={style.ContactContainer}>
-          <address className={style.ContactBox}>
+          <address
+            className={style.ContactBox}
+            style={{ border: '0.4vh solid' + Theme._20_ }}
+          >
             <span>Enviar Correo</span>
             <a href="mailto:fertimo99@gmail.com" style={{ color: Theme._20_ }}>
               timoideas@hotmail.com
             </a>
-            <label className={style.ContactTipe}>Correo</label>
+            <label
+              className={style.ContactTipe}
+              style={{ background: Theme._00_, color: Theme._20_ }}
+            >
+              Correo
+            </label>
           </address>
         </div>
-        <address className={style.ContactBox}>
+        <address
+          className={style.ContactBox}
+          style={{ border: '0.4vh solid' + Theme._20_ }}
+        >
           <span>Llamar</span>
           <a href="tel:+51983443031" style={{ color: Theme._20_ }}>
             +51 983443031
           </a>
-          <label>Teléfono</label>
+          <label style={{ background: Theme._00_, color: Theme._20_ }}>
+            Teléfono
+          </label>
         </address>
-        <label>
+        <label style={{ background: Theme._20_ }}>
           <abbr style={{ color: Theme._20_, backgroundColor: Theme._00_ }}>
             o
           </abbr>
@@ -221,7 +234,10 @@ function FifthStep() {
         </button>
       </div>
       <div className={style.PageInfo}>
-        <footer className={style.FooterContainer}>
+        <footer
+          className={style.FooterContainer}
+          style={{ borderTop: '0.2vh solid' + Theme._05 }}
+        >
           <button
             className={style.DownloadTemplate}
             onClick={() => {

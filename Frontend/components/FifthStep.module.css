@@ -385,7 +385,6 @@
   font-size: 3.5vh;
   text-decoration: none;
   font-style: normal;
-  color: #333;
   font-weight: 700;
 }
 .ContactBox label {
@@ -401,7 +400,6 @@
 .Contact > label {
   margin: 2vh 0;
   width: 35vh;
-  background: #333;
   height: 0.21vh;
   display: flex;
   justify-content: center;
@@ -475,7 +473,6 @@
   clear: both;
   position: relative;
   width: 80vw;
-  border-top: 0.2vh solid #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
