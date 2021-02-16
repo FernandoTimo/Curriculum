@@ -1,0 +1,44 @@
+{
+  "name": "setup-express",
+  "version": "0.9.1",
+  "description": "Configuracion de Backend con Express",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "babel src --out-dir dist",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "server": "ngrok http 4000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FernandoTimo/Backend-Express.git"
+  },
+  "author": "FernandoTimo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FernandoTimo/Backend-Express/issues"
+  },
+  "homepage": "https://github.com/FernandoTimo/Backend-Express#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.7",
+    "mongoose-unique-validator": "^2.0.3",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^2.3.0",
+    "twilio": "^3.49.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.11.5",
+    "nodemon": "^2.0.4"
+  }
+}
