@@ -21,5 +21,3 @@ Visita este curriculum creado el **Viernes 1 de enero** en:
 https://curriculum.timoideas.com
 
 ---
-
-Destinatario: [📧 Jesus Salinas](__jjesus.salinas@gmail.com__ 'Correo electrónico')
