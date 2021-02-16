@@ -4,6 +4,7 @@ export function ThemeContextProvider({ children }) {
   //            <--=========================================================== [ Light Theme Palette ]
   const Light = {
     _00: '#ffffff',
+    _00_: '#c9d1d9',
     _01: '#fafafa',
     _02: '#f3f3f3',
     _03: '#ededed',
@@ -24,10 +25,12 @@ export function ThemeContextProvider({ children }) {
     _18: '#0f0f0f',
     _19: '#070707',
     _20: '#000000',
+    _20_: '#0d1117',
   };
   //            <--=========================================================== [ Dark Theme Palette ]
   const Dark = {
     _00: '#000000',
+    _00_: '#0d1117',
     _01: '#070707',
     _02: '#0f0f0f',
     _03: '#141414',
@@ -48,6 +51,7 @@ export function ThemeContextProvider({ children }) {
     _18: '#f3f3f3',
     _19: '#fafafa',
     _20: '#ffffff',
+    _20_: '#c9d1d9',
   };
   //            <--=========================================================== [ useStates ]
   const [Theme, setMode] = useState(Dark);

@@ -22,8 +22,8 @@ export function Section({ bg, children, size }) {
     <section
       className="Section"
       style={{
-        background: bg ? randomBG() : Theme._00,
-        color: Theme._20,
+        background: bg ? randomBG() : Theme._00_,
+        color: Theme._20_,
         height: size ? `${size}00vh` : '100vh',
       }}
     >
@@ -92,7 +92,7 @@ export function Footer({ bg, padding, height, children, center }) {
         alignItems: center ? 'center' : 'start',
         padding: padding ? padding / 2 + 'vh' : 0,
         height: height ? height + 'vh' : '5vh',
-        background: bg ? randomBG() : '#fafafa',
+        background: bg ? randomBG() : Theme_00_,
       }}
     >
       {children}
