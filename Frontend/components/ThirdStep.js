@@ -3,12 +3,15 @@ function ThirdStep() {
   return (
     <div className={style.ThirdStep}>
       {/* <h2>Github</h2> */}
-      <div>
+      <div className={style.Title}>
         <div>
+          <div className={style.Profile}>
+            <img alt="FernandoTimo" src="images/FernandoTimo.jpg" />
+          </div>
           {/* Aqui van la imagen y animacion de infinita de borde redondeado y multicolor */}
         </div>
         <div>
-          <h2>Mis Repositorios</h2>
+          <h2>Repositorios</h2>
           <label>desde el 2020 hasta HOY</label>
         </div>
       </div>
@@ -18,7 +21,7 @@ function ThirdStep() {
             <div className={style.GitHub}>
               <img alt="GitHub" src="icons/social/GitHub.png" />
             </div>
-            <div className={style.Title}>
+            <div className={style.Repo}>
               <svg>
                 <path
                   fill-rule="evenodd"
@@ -89,6 +92,7 @@ function ThirdStep() {
           </div>
         </div>
       </div>
+      <div className={style.Control}>1 2 3 4</div>
       {/* No podrá scrolear hasta que se muestren los 4 */}
     </div>
   );
