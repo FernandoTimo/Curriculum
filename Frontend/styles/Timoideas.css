@@ -941,3 +941,16 @@
   width: 100%;
   flex: 1;
 }
+.PoligonoContainer,
+.Poligono {
+  width: 60vh;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40%;
+}
+.Poligono {
+  transform: rotate(45deg);
+}
