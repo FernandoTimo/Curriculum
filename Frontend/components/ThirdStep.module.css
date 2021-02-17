@@ -63,3 +63,47 @@
 .RepoCard div a:hover {
   text-decoration: underline;
 }
+.Header {
+  font-size: 1.5vh;
+  line-height: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Header img {
+  width: 1.5vh;
+  height: 1.5vh;
+}
+.Descripcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vh;
+  line-height: 1.5vh;
+}
+.Descripcion img {
+  width: 1.5vh;
+  height: 1.5vh;
+}
+.Readme {
+  font-size: 1.5vh;
+  line-height: 1.5vh;
+}
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Footer img {
+  height: 4vh;
+}
+.VideoContainer {
+  /* background: #fa0; */
+  background: url('/images/Video_Frame.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50vh;
+  height: 50vh;
+}
