@@ -10,7 +10,6 @@ Este proyecto está elaborado con las siguientes tecnologías:
 
 ## Backend
 
-- Lenguaje: Javascript
 - Entorno: Node
 - Framework: Express
 - Base de Datos: MongoDB
