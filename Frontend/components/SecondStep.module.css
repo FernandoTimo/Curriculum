@@ -1,0 +1,53 @@
+.SecondStep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vh;
+}
+.Title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Title h2 {
+  position: absolute;
+  animation: Title 2s forwards;
+}
+.Title h2:nth-child(2) {
+  animation-delay: 0.2s;
+  opacity: 0.1;
+}
+.Title h2:nth-child(1) {
+  animation-delay: 0.4s;
+  opacity: 0.2;
+}
+@keyframes Title {
+  0% {
+    font-size: 7vh;
+    line-height: 15vh;
+  }
+  20% {
+    font-size: 15vh;
+    line-height: 15vh;
+  }
+  80% {
+    text-shadow: 0 0 0vh #fff0;
+    font-size: 5vh;
+    line-height: 5vh;
+  }
+  100% {
+    font-size: 5vh;
+    line-height: 5vh;
+    text-shadow: 0 0 15vh #fff;
+  }
+}
+.Card {
+  border: 1px solid #5555;
+  border-radius: 1vh;
+  width: 50vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
