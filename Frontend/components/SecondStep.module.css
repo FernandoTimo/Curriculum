@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 1vh;
 }
+
 .Title {
   display: flex;
   justify-content: center;
@@ -42,9 +43,13 @@
     text-shadow: 0 0 15vh #fff;
   }
 }
+.StackContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .Card {
-  border: 1px solid #5555;
-  border-radius: 1vh;
   width: 50vw;
   height: 30vh;
   display: flex;
