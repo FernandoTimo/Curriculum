@@ -1,4 +1,11 @@
-import { useState, useEffect, Children, cloneElement, useRef } from 'react';
+import {
+  useState,
+  useEffect,
+  Children,
+  cloneElement,
+  useRef,
+  useLayoutEffect,
+} from 'react';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { useTheme } from 'hooks/useTheme';
@@ -133,22 +140,39 @@ export function Modal({
       active[1]();
     }
   };
+  const Refs = useRef();
+  const [ChildrenSizes, setChildrenSizes] = useState([]);
+  useEffect(() => {
+    setChildrenSizes([Refs.current.clientWidth, Refs.current.clientHeight]);
+  }, []);
+  console.log(ChildrenSizes);
   return (
     <div
-      className="ModalContainer"
-      onClick={CerrarModal}
-      tabIndex="0"
+      className="ModalEmpty"
       style={{
-        opacity: show ? '1' : '0',
-        pointerEvents: show ? 'visible' : 'none',
-        justifyContent: center ? 'center' : 'flexStart',
-        alignItems: center ? 'center' : 'flexStart',
-        background: background,
-        backdropFilter: `blur(${blur / 3}vh)`,
-        transition: transition + 's',
+        width: ChildrenSizes[0],
+        height: ChildrenSizes[1],
       }}
     >
-      {children}
+      <div
+        className="ModalContainer"
+        onClick={CerrarModal}
+        tabIndex="0"
+        style={{
+          width: show ? '100vw' : '100%',
+          height: show ? '100vh' : '100%',
+          opacity: show ? '1' : '0',
+          pointerEvents: show ? 'visible' : 'none',
+          justifyContent: center ? 'center' : 'flexStart',
+          alignItems: center ? 'center' : 'flexStart',
+          background: background,
+          backdropFilter: `blur(${blur / 3}vh)`,
+          transition: transition + 's',
+        }}
+        ref={Refs}
+      >
+        {children}
+      </div>
     </div>
   );
 }
