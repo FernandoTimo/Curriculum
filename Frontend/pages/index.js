@@ -32,7 +32,7 @@ export default function Index() {
           <Contacto />
         </Section>
         <Section size={1}>
-          <Animation></Animation>
+          <Animation>asd</Animation>
         </Section>
       </Body>
     </>

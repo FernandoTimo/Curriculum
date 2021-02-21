@@ -828,34 +828,11 @@ export function Animation({ children }) {
     AdobeAn.compositionLoaded(lib.properties.id);
     fnStartAnimation();
   }
-  console.log({ children });
   return (
     <div class="AnimationContainer" ref={ContainerRef}>
-      <canvas
-        ref={CanvasRef}
-        id="canvas"
-        width="100"
-        height="100"
-        style={{
-          position: 'absolute',
-          display: 'block',
-          backgroundColor: 'transparent',
-        }}
-      ></canvas>
-      <div
-        ref={OverlayRef}
-        id="dom_overlay_container"
-        style={{
-          pointerEvents: 'none',
-          overflow: 'hidden',
-          width: '100px',
-          height: '100px',
-          position: 'absolute',
-          left: '0px',
-          top: '0px',
-          display: 'block',
-        }}
-      ></div>
+      <canvas ref={CanvasRef} width="100" height="100"></canvas>
+      <div ref={OverlayRef} style={{ width: '100px', eight: '100px' }}></div>
+      {children}
     </div>
   );
 }
