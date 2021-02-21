@@ -797,7 +797,7 @@ export function Poligon({ children, size = '10vh', sides = 8, bg }) {
 }
 // import 'https://code.createjs.com/1.0.0/createjs.min.js';
 // import './Losa';
-export function Animation({ children }) {
+export function Animation({ children, width = 100, height = 100 }) {
   const CanvasRef = useRef();
   const ContainerRef = useRef();
   const OverlayRef = useRef();
@@ -830,8 +830,11 @@ export function Animation({ children }) {
   }
   return (
     <div class="AnimationContainer" ref={ContainerRef}>
-      <canvas ref={CanvasRef} width="100" height="100"></canvas>
-      <div ref={OverlayRef} style={{ width: '100px', eight: '100px' }}></div>
+      <canvas ref={CanvasRef} width={width} height={height}></canvas>
+      <div
+        ref={OverlayRef}
+        style={{ width: `${width}px`, height: `${height}px` }}
+      ></div>
       {children}
     </div>
   );
