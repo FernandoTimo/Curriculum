@@ -795,3 +795,21 @@ export function Poligon({ children, size = '10vh', sides = 8, bg }) {
     </div>
   );
 }
+import 'https://code.createjs.com/1.0.0/createjs.min.js';
+// import 'Losa.js';
+export function Animation({ children }) {
+  return (
+    <div class="AnimationContainer">
+      <canvas
+        id="canvas"
+        width="100"
+        height="100"
+        style="position: absolute; display: block; background-color:transparent;"
+      ></canvas>
+      <div
+        id="dom_overlay_container"
+        style="pointer-events:none; overflow:hidden; width:100px; height:100px; position: absolute; left: 0px; top: 0px; display: block;"
+      ></div>
+    </div>
+  );
+}
