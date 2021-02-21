@@ -797,10 +797,19 @@ export function Poligon({ children, size = '10vh', sides = 8, bg }) {
 }
 // import 'https://code.createjs.com/1.0.0/createjs.min.js';
 // import './Losa';
-export function Animation({ children, width = 100, height = 100 }) {
+export function Animation({
+  children,
+  animate = false,
+  width = 100,
+  height = 100,
+}) {
+  const [Animate, setAnimate] = useState(animate);
   const CanvasRef = useRef();
   const ContainerRef = useRef();
   const OverlayRef = useRef();
+  useEffect(() => {
+    setAnimate(animate);
+  }, [animate]);
 
   function Animar() {
     canvas = CanvasRef.current;
