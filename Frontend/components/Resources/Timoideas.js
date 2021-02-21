@@ -798,15 +798,48 @@ export function Poligon({ children, size = '10vh', sides = 8, bg }) {
 import 'https://code.createjs.com/1.0.0/createjs.min.js';
 // import 'Losa.js';
 export function Animation({ children }) {
+  const CanvasRef = useRef();
+  const ContainerRef = useRef();
+  const OverlayRef = useRef();
+
+  function Animar() {
+    canvas = CanvasRef.current;
+    anim_container = ContainerRef.current;
+    dom_overlay_container = OverlayRef.current;
+    var comp = AdobeAn.getComposition('96CF19E23B82ED41BD408D0D61F15EFA');
+    var lib = comp.getLibrary();
+    handleComplete({}, comp);
+  }
+  function handleComplete(evt, comp) {
+    var lib = comp.getLibrary();
+    var ss = comp.getSpriteSheet();
+    exportRoot = new lib.Sintítulo1();
+    stage = new lib.Stage(canvas);
+    fnStartAnimation = function () {
+      stage.addChild(exportRoot);
+      createjs.Ticker.framerate = lib.properties.fps;
+      createjs.Ticker.addEventListener('tick', stage);
+    };
+    AdobeAn.makeResponsive(false, 'both', false, 1, [
+      canvas,
+      anim_container,
+      dom_overlay_container,
+    ]);
+    AdobeAn.compositionLoaded(lib.properties.id);
+    fnStartAnimation();
+  }
+  console.log({ children });
   return (
-    <div class="AnimationContainer">
+    <div class="AnimationContainer" ref={ContainerRef}>
       <canvas
+        ref={CanvasRef}
         id="canvas"
         width="100"
         height="100"
         style="position: absolute; display: block; background-color:transparent;"
       ></canvas>
       <div
+        ref={OverlayRef}
         id="dom_overlay_container"
         style="pointer-events:none; overflow:hidden; width:100px; height:100px; position: absolute; left: 0px; top: 0px; display: block;"
       ></div>
