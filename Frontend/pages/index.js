@@ -1,6 +1,11 @@
 import style from 'styles/css/Index.module.css';
 import { Header_Main } from 'heads/Header_Main';
-import { Body, Section, Content } from 'components/Resources/Timoideas';
+import {
+  Body,
+  Section,
+  Content,
+  Animation,
+} from 'components/Resources/Timoideas';
 import Presentacion from 'components/FisrtStep';
 import Stack from 'components/SecondStep';
 import GitHub from 'components/ThirdStep';
@@ -25,6 +30,9 @@ export default function Index() {
         </Section>
         <Section size={1}>
           <Contacto />
+        </Section>
+        <Section size={1}>
+          <Animation></Animation>
         </Section>
       </Body>
     </>

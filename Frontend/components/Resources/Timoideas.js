@@ -795,8 +795,8 @@ export function Poligon({ children, size = '10vh', sides = 8, bg }) {
     </div>
   );
 }
-import 'https://code.createjs.com/1.0.0/createjs.min.js';
-// import 'Losa.js';
+// import 'https://code.createjs.com/1.0.0/createjs.min.js';
+// import './Losa';
 export function Animation({ children }) {
   const CanvasRef = useRef();
   const ContainerRef = useRef();
@@ -836,12 +836,25 @@ export function Animation({ children }) {
         id="canvas"
         width="100"
         height="100"
-        style="position: absolute; display: block; background-color:transparent;"
+        style={{
+          position: 'absolute',
+          display: 'block',
+          backgroundColor: 'transparent',
+        }}
       ></canvas>
       <div
         ref={OverlayRef}
         id="dom_overlay_container"
-        style="pointer-events:none; overflow:hidden; width:100px; height:100px; position: absolute; left: 0px; top: 0px; display: block;"
+        style={{
+          pointerEvents: 'none',
+          overflow: 'hidden',
+          width: '100px',
+          height: '100px',
+          position: 'absolute',
+          left: '0px',
+          top: '0px',
+          display: 'block',
+        }}
       ></div>
     </div>
   );
