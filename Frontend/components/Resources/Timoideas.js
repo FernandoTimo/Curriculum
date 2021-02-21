@@ -424,6 +424,7 @@ const Router = ({ setNavigation }) => {
   );
 };
 import { NavigationContextProvider } from 'context/NavigationContext';
+import Head from 'next/head';
 export const Navigation = () => {
   const [Navigate, setNavigate] = useState(false);
   const { Theme, setTheme } = useTheme();
@@ -795,7 +796,7 @@ export function Poligon({ children, size = '10vh', sides = 8, bg }) {
     </div>
   );
 }
-// import 'https://code.createjs.com/1.0.0/createjs.min.js';
+// import '';
 // import './Losa';
 export function Animation({
   children,
@@ -810,7 +811,7 @@ export function Animation({
   useEffect(() => {
     setAnimate(animate);
   }, [animate]);
-
+  Animate && Animar();
   function Animar() {
     canvas = CanvasRef.current;
     anim_container = ContainerRef.current;
@@ -839,6 +840,12 @@ export function Animation({
   }
   return (
     <div class="AnimationContainer" ref={ContainerRef}>
+      <Head>
+        <script
+          type="text/javascript"
+          src="https://code.createjs.com/1.0.0/createjs.min.js"
+        />
+      </Head>
       <canvas ref={CanvasRef} width={width} height={height}></canvas>
       <div
         ref={OverlayRef}
