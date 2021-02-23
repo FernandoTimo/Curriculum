@@ -790,7 +790,7 @@ export function Poligon({ children, size = '10vh', sides = 8, bg }) {
 //            <--=========================================================== [ Animacion ]
 //             -----------------------------  [ Animacion ]  -----------------------------
 //            <--=========================================================== [ Animacion ]
-import dasdwq from './createjs';
+// import dasdwq from './createjs';
 // import Aniwer from './Losa';
 export function Animation({
   children,
@@ -800,17 +800,21 @@ export function Animation({
   script = 'script/Losa.js',
   id = '2367616E571929429CB3B8A1959D9915',
 }) {
-  console.log(typeof dasdwq);
+  // console.log(typeof dasdwq);
   return (
     <div
       className="AnimationContainer"
       id="animation_container"
-      ref={ContainerRef}
+      // ref={ContainerRef}
     >
-      <canvas id="canvas" ref={CanvasRef} width="500" height={height}></canvas>
+      <canvas
+        id="canvas"
+        // ref={CanvasRef} width="500"
+        height={height}
+      ></canvas>
       <div
         id="dom_overlay_container"
-        ref={OverlayRef}
+        // ref={OverlayRef}
         style={{ width: `${width}px`, height: `${height}px` }}
       ></div>
       {children}
