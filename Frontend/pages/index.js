@@ -11,7 +11,10 @@ import Stack from 'components/SecondStep';
 import GitHub from 'components/ThirdStep';
 import Complementos from 'components/FourthStep';
 import Contacto from 'components/FifthStep';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 export default function Index() {
+  console.log(useRouter().locale);
   return (
     <>
       <Header_Main />
