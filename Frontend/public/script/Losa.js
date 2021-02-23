@@ -1,5 +1,5 @@
-var createjs, AdobeAn;
-(function (cjs, an) {
+import { MovieClip, Shape, Tween, Rectangle } from 'createjs-module';
+export default function (an) {
   var p; // shortcut to reference prototypes
   var lib = {};
   var ss = {};
@@ -10,18 +10,18 @@ var createjs, AdobeAn;
     this.actionFrames = [];
     this.ignorePause = false;
     this.gotoAndPlay = function (positionOrLabel) {
-      cjs.MovieClip.prototype.gotoAndPlay.call(this, positionOrLabel);
+      MovieClip.prototype.gotoAndPlay.call(this, positionOrLabel);
     };
     this.play = function () {
-      cjs.MovieClip.prototype.play.call(this);
+      MovieClip.prototype.play.call(this);
     };
     this.gotoAndStop = function (positionOrLabel) {
-      cjs.MovieClip.prototype.gotoAndStop.call(this, positionOrLabel);
+      MovieClip.prototype.gotoAndStop.call(this, positionOrLabel);
     };
     this.stop = function () {
-      cjs.MovieClip.prototype.stop.call(this);
+      MovieClip.prototype.stop.call(this);
     };
-  }).prototype = p = new cjs.MovieClip();
+  }).prototype = p = new MovieClip();
   // symbols:
 
   // stage content:
@@ -38,10 +38,10 @@ var createjs, AdobeAn;
     props.labels = {};
     props.loop = loop;
     props.reversed = reversed;
-    cjs.MovieClip.apply(this, [props]);
+    MovieClip.apply(this, [props]);
 
     // Capa_1
-    this.shape = new cjs.Shape();
+    this.shape = new Shape();
     this.shape.graphics
       .f('#9BD9B6')
       .s()
@@ -50,7 +50,7 @@ var createjs, AdobeAn;
       );
     this.shape.setTransform(79.3346, 314.253);
 
-    this.shape_1 = new cjs.Shape();
+    this.shape_1 = new Shape();
     this.shape_1.graphics
       .f('#9BD9B6')
       .s()
@@ -59,7 +59,7 @@ var createjs, AdobeAn;
       );
     this.shape_1.setTransform(106.5128, 275.2608);
 
-    this.shape_2 = new cjs.Shape();
+    this.shape_2 = new Shape();
     this.shape_2.graphics
       .f('#9BD9B6')
       .s()
@@ -68,7 +68,7 @@ var createjs, AdobeAn;
       );
     this.shape_2.setTransform(121.0825, 235.125);
 
-    this.shape_3 = new cjs.Shape();
+    this.shape_3 = new Shape();
     this.shape_3.graphics
       .f('#9BD9B6')
       .s()
@@ -77,7 +77,7 @@ var createjs, AdobeAn;
       );
     this.shape_3.setTransform(142.6949, 193.4313);
 
-    this.shape_4 = new cjs.Shape();
+    this.shape_4 = new Shape();
     this.shape_4.graphics
       .f('#9BD9B6')
       .s()
@@ -86,7 +86,7 @@ var createjs, AdobeAn;
       );
     this.shape_4.setTransform(177.6694, 163.2803);
 
-    this.shape_5 = new cjs.Shape();
+    this.shape_5 = new Shape();
     this.shape_5.graphics
       .f('#9BD9B6')
       .s()
@@ -95,7 +95,7 @@ var createjs, AdobeAn;
       );
     this.shape_5.setTransform(218.1181, 148.52);
 
-    this.shape_6 = new cjs.Shape();
+    this.shape_6 = new Shape();
     this.shape_6.graphics
       .f('#9BD9B6')
       .s()
@@ -104,7 +104,7 @@ var createjs, AdobeAn;
       );
     this.shape_6.setTransform(252.4967, 165.763);
 
-    this.shape_7 = new cjs.Shape();
+    this.shape_7 = new Shape();
     this.shape_7.graphics
       .f('#9BD9B6')
       .s()
@@ -113,7 +113,7 @@ var createjs, AdobeAn;
       );
     this.shape_7.setTransform(264.0225, 195.9);
 
-    this.shape_8 = new cjs.Shape();
+    this.shape_8 = new Shape();
     this.shape_8.graphics
       .f('#9BD9B6')
       .s()
@@ -122,7 +122,7 @@ var createjs, AdobeAn;
       );
     this.shape_8.setTransform(264.0673, 222.025);
 
-    this.shape_9 = new cjs.Shape();
+    this.shape_9 = new Shape();
     this.shape_9.graphics
       .f('#9BD9B6')
       .s()
@@ -131,7 +131,7 @@ var createjs, AdobeAn;
       );
     this.shape_9.setTransform(258.9615, 242.2302);
 
-    this.shape_10 = new cjs.Shape();
+    this.shape_10 = new Shape();
     this.shape_10.graphics
       .f('#9BD9B6')
       .s()
@@ -140,7 +140,7 @@ var createjs, AdobeAn;
       );
     this.shape_10.setTransform(231.3513, 273.2913);
 
-    this.shape_11 = new cjs.Shape();
+    this.shape_11 = new Shape();
     this.shape_11.graphics
       .f('#9BD9B6')
       .s()
@@ -149,7 +149,7 @@ var createjs, AdobeAn;
       );
     this.shape_11.setTransform(179.6349, 307.4169);
 
-    this.shape_12 = new cjs.Shape();
+    this.shape_12 = new Shape();
     this.shape_12.graphics
       .f('#9BD9B6')
       .s()
@@ -158,7 +158,7 @@ var createjs, AdobeAn;
       );
     this.shape_12.setTransform(137.6726, 349.0839);
 
-    this.shape_13 = new cjs.Shape();
+    this.shape_13 = new Shape();
     this.shape_13.graphics
       .f('#9BD9B6')
       .s()
@@ -167,7 +167,7 @@ var createjs, AdobeAn;
       );
     this.shape_13.setTransform(144.134, 395.3413);
 
-    this.shape_14 = new cjs.Shape();
+    this.shape_14 = new Shape();
     this.shape_14.graphics
       .f('#9BD9B6')
       .s()
@@ -176,7 +176,7 @@ var createjs, AdobeAn;
       );
     this.shape_14.setTransform(187.799, 415.3546);
 
-    this.shape_15 = new cjs.Shape();
+    this.shape_15 = new Shape();
     this.shape_15.graphics
       .f('#9BD9B6')
       .s()
@@ -185,7 +185,7 @@ var createjs, AdobeAn;
       );
     this.shape_15.setTransform(233.7189, 395.9125);
 
-    this.shape_16 = new cjs.Shape();
+    this.shape_16 = new Shape();
     this.shape_16.graphics
       .f('#9BD9B6')
       .s()
@@ -194,7 +194,7 @@ var createjs, AdobeAn;
       );
     this.shape_16.setTransform(266.0109, 363.6293);
 
-    this.shape_17 = new cjs.Shape();
+    this.shape_17 = new Shape();
     this.shape_17.graphics
       .f('#9BD9B6')
       .s()
@@ -203,7 +203,7 @@ var createjs, AdobeAn;
       );
     this.shape_17.setTransform(287.889, 329.0097);
 
-    this.shape_18 = new cjs.Shape();
+    this.shape_18 = new Shape();
     this.shape_18.graphics
       .f('#9BD9B6')
       .s()
@@ -212,7 +212,7 @@ var createjs, AdobeAn;
       );
     this.shape_18.setTransform(290.1191, 287.2179);
 
-    this.shape_19 = new cjs.Shape();
+    this.shape_19 = new Shape();
     this.shape_19.graphics
       .f('#9BD9B6')
       .s()
@@ -221,7 +221,7 @@ var createjs, AdobeAn;
       );
     this.shape_19.setTransform(268.7638, 255.1548);
 
-    this.shape_20 = new cjs.Shape();
+    this.shape_20 = new Shape();
     this.shape_20.graphics
       .f('#9BD9B6')
       .s()
@@ -230,7 +230,7 @@ var createjs, AdobeAn;
       );
     this.shape_20.setTransform(217.125, 245.0448);
 
-    this.shape_21 = new cjs.Shape();
+    this.shape_21 = new Shape();
     this.shape_21.graphics
       .f('#9BD9B6')
       .s()
@@ -239,7 +239,7 @@ var createjs, AdobeAn;
       );
     this.shape_21.setTransform(178.0669, 277.811);
 
-    this.shape_22 = new cjs.Shape();
+    this.shape_22 = new Shape();
     this.shape_22.graphics
       .f('#9BD9B6')
       .s()
@@ -248,7 +248,7 @@ var createjs, AdobeAn;
       );
     this.shape_22.setTransform(171.587, 327.3);
 
-    this.shape_23 = new cjs.Shape();
+    this.shape_23 = new Shape();
     this.shape_23.graphics
       .f('#9BD9B6')
       .s()
@@ -257,7 +257,7 @@ var createjs, AdobeAn;
       );
     this.shape_23.setTransform(222.134, 391.575);
 
-    this.shape_24 = new cjs.Shape();
+    this.shape_24 = new Shape();
     this.shape_24.graphics
       .f('#9BD9B6')
       .s()
@@ -266,7 +266,7 @@ var createjs, AdobeAn;
       );
     this.shape_24.setTransform(339.6723, 362.7296);
 
-    this.shape_25 = new cjs.Shape();
+    this.shape_25 = new Shape();
     this.shape_25.graphics
       .f('#9BD9B6')
       .s()
@@ -275,7 +275,7 @@ var createjs, AdobeAn;
       );
     this.shape_25.setTransform(414.2496, 233.8777);
 
-    this.shape_26 = new cjs.Shape();
+    this.shape_26 = new Shape();
     this.shape_26.graphics
       .f('#9BD9B6')
       .s()
@@ -284,7 +284,7 @@ var createjs, AdobeAn;
       );
     this.shape_26.setTransform(338.6241, 139.1729);
 
-    this.shape_27 = new cjs.Shape();
+    this.shape_27 = new Shape();
     this.shape_27.graphics
       .f('#9BD9B6')
       .s()
@@ -293,7 +293,7 @@ var createjs, AdobeAn;
       );
     this.shape_27.setTransform(260.1484, 166.1917);
 
-    this.shape_28 = new cjs.Shape();
+    this.shape_28 = new Shape();
     this.shape_28.graphics
       .f('#9BD9B6')
       .s()
@@ -302,7 +302,7 @@ var createjs, AdobeAn;
       );
     this.shape_28.setTransform(278.2779, 226);
 
-    this.shape_29 = new cjs.Shape();
+    this.shape_29 = new Shape();
     this.shape_29.graphics
       .f('#9BD9B6')
       .s()
@@ -311,7 +311,7 @@ var createjs, AdobeAn;
       );
     this.shape_29.setTransform(322.1694, 245.575);
 
-    this.shape_30 = new cjs.Shape();
+    this.shape_30 = new Shape();
     this.shape_30.graphics
       .f('#9BD9B6')
       .s()
@@ -320,7 +320,7 @@ var createjs, AdobeAn;
       );
     this.shape_30.setTransform(366.2153, 235.6995);
 
-    this.shape_31 = new cjs.Shape();
+    this.shape_31 = new Shape();
     this.shape_31.graphics
       .f('#9BD9B6')
       .s()
@@ -329,7 +329,7 @@ var createjs, AdobeAn;
       );
     this.shape_31.setTransform(399.8844, 209.6679);
 
-    this.shape_32 = new cjs.Shape();
+    this.shape_32 = new Shape();
     this.shape_32.graphics
       .f('#9BD9B6')
       .s()
@@ -338,7 +338,7 @@ var createjs, AdobeAn;
       );
     this.shape_32.setTransform(442.7097, 188.5429);
 
-    this.shape_33 = new cjs.Shape();
+    this.shape_33 = new Shape();
     this.shape_33.graphics
       .f('#9BD9B6')
       .s()
@@ -348,7 +348,7 @@ var createjs, AdobeAn;
     this.shape_33.setTransform(467.7554, 206.9653);
 
     this.timeline.addTween(
-      cjs.Tween.get({})
+      Tween.get({})
         .to({ state: [{ t: this.shape }] })
         .to({ state: [{ t: this.shape_1 }] }, 1)
         .to({ state: [{ t: this.shape_2 }] }, 1)
@@ -388,7 +388,7 @@ var createjs, AdobeAn;
 
     this._renderFirstFrame();
   }).prototype = p = new lib.AnMovieClip();
-  p.nominalBounds = new cjs.Rectangle(315.3, 366.3, 155.09999999999997, 57);
+  p.nominalBounds = new Rectangle(315.3, 366.3, 155.09999999999997, 57);
   // library properties:
   lib.properties = {
     id: '2367616E571929429CB3B8A1959D9915',
@@ -506,6 +506,7 @@ var createjs, AdobeAn;
           sRatio = Math.max(xRatio, yRatio);
         }
       }
+      console.log(domContainers[0]);
       domContainers[0].width = w * pRatio * sRatio;
       domContainers[0].height = h * pRatio * sRatio;
       domContainers.forEach(function (container) {
@@ -530,4 +531,5 @@ var createjs, AdobeAn;
       }
     }
   };
-})((createjs = createjs || {}), (AdobeAn = AdobeAn || {}));
+  return an;
+}
