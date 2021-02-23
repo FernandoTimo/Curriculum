@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Modal } from './Resources/Timoideas';
 import style from './SecondStep.module.css';
 function SecondStep() {
-  const [ModalProyectos, setModalProyectos] = useState(true);
+  const [ModalProyectos, setModalProyectos] = useState(false);
   const toggleModalProyectos = () => {
     setModalProyectos(false);
   };
