@@ -417,7 +417,6 @@ const Router = ({ setNavigation }) => {
 };
 import { NavigationContextProvider } from 'context/NavigationContext';
 import Head from 'next/head';
-import Losa, { AdobeAn, createjs } from './Losa';
 export const Navigation = () => {
   const [Navigate, setNavigate] = useState(false);
   const { Theme, setTheme } = useTheme();
@@ -791,66 +790,24 @@ export function Poligon({ children, size = '10vh', sides = 8, bg }) {
 //            <--=========================================================== [ Animacion ]
 //             -----------------------------  [ Animacion ]  -----------------------------
 //            <--=========================================================== [ Animacion ]
+import dasdwq from './createjs';
+// import Aniwer from './Losa';
 export function Animation({
   children,
   // animate = false,
   width = 100,
   height = 100,
+  script = 'script/Losa.js',
+  id = '2367616E571929429CB3B8A1959D9915',
 }) {
-  const CanvasRef = useRef();
-  const ContainerRef = useRef();
-  const OverlayRef = useRef();
+  console.log(typeof dasdwq);
   return (
     <div
       className="AnimationContainer"
       id="animation_container"
       ref={ContainerRef}
     >
-      <Head>
-        <script
-          type="text/javascript"
-          src="https://code.createjs.com/1.0.0/createjs.min.js"
-        />
-        <script type="text/javascript" src="script/Losa.js" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
-            function init() {
-              canvas = document.getElementById("canvas");
-              anim_container = document.getElementById("animation_container");
-              dom_overlay_container = document.getElementById("dom_overlay_container");
-              var comp=AdobeAn.getComposition("2367616E571929429CB3B8A1959D9915");
-              var lib=comp.getLibrary();
-              handleComplete({},comp);
-            }
-            function handleComplete(evt,comp) {
-              //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-              var lib=comp.getLibrary();
-              var ss=comp.getSpriteSheet();
-              exportRoot = new lib.Sintítulo1();
-              stage = new lib.Stage(canvas);
-              //Registers the "tick" event listener.
-              fnStartAnimation = function() {
-                stage.addChild(exportRoot);
-                createjs.Ticker.framerate = lib.properties.fps;
-                createjs.Ticker.addEventListener("tick", stage);
-              }
-              //Code to support hidpi screens and responsive scaling.
-              AdobeAn.makeResponsive(true,'both',false,1,[canvas,anim_container,dom_overlay_container]);
-              AdobeAn.compositionLoaded(lib.properties.id);
-              fnStartAnimation();
-            }
-            init()`,
-          }}
-        />
-      </Head>
-      <canvas
-        id="canvas"
-        ref={CanvasRef}
-        width={width}
-        height={height}
-      ></canvas>
+      <canvas id="canvas" ref={CanvasRef} width="500" height={height}></canvas>
       <div
         id="dom_overlay_container"
         ref={OverlayRef}
