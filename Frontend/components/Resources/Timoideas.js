@@ -416,7 +416,6 @@ const Router = ({ setNavigation }) => {
   );
 };
 import { NavigationContextProvider } from 'context/NavigationContext';
-import Head from 'next/head';
 export const Navigation = () => {
   const [Navigate, setNavigate] = useState(false);
   const { Theme, setTheme } = useTheme();
@@ -440,14 +439,35 @@ export const Navigation = () => {
   return (
     <NavigationContextProvider>
       <div className="NavigationContainer">
-        <span className="NavigationLabel" onClick={setTheme}>
-          {Theme._00 === '#ffffff' ? '🌖' : '🌒'}
-        </span>
+        <Themeas />
         {Navigate && <Router setNavigation={setNavigation} />}
       </div>
     </NavigationContextProvider>
   );
 };
+import Ligth from 'public/theme/Ligth.json';
+import Dark from 'public/theme/Dark.json';
+
+export function Themeas() {
+  const [currentTheme, setTheme] = useState('light');
+  const onClick = () => {
+    const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(nextTheme);
+    applyTheme(nextTheme);
+  };
+  const applyTheme = (nextTheme) => {
+    const theme = nextTheme === 'dark' ? Ligth : Dark;
+    Object.keys(theme).map((key) => {
+      const value = theme[key];
+      document.documentElement.style.setProperty(key, value);
+    });
+  };
+  return (
+    <span className="NavigationLabel" onClick={onClick}>
+      {currentTheme === 'light' ? '🌖' : '🌒'}
+    </span>
+  );
+}
 export default Navigation;
 // verificar si la ruta ya esta en el arreglo andes de grergar a la lsita de Routues
 // Agregar autocompletado

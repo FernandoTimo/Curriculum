@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import style from './FisrtStep.module.css';
 // import Liasdd from 'components/Resources/Ligth.json';
-import Ligth from 'public/theme/Ligth.json';
-import Dark from 'public/theme/Dark.json';
 function FisrtStep() {
   const [firstStep, setfirstStep] = useState(true);
   const [secondStep, setsecondStep] = useState(false);
@@ -20,33 +18,10 @@ function FisrtStep() {
     setfirstStep(true);
     setsecondStep(false);
   };
-  useEffect(() => {
-    var asd = window
-      .getComputedStyle(document.documentElement)
-      .getPropertyValue('--color-surface');
-    console.log(asd);
-    document.documentElement.style.setProperty('--color-surface', 'black');
-    console.log(asd);
-    return;
-  }, []);
-  const [currentTheme, setTheme] = React.useState('light');
-  const onClick = () => {
-    const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setTheme(nextTheme);
-    applyTheme(nextTheme);
-  };
-  const applyTheme = (nextTheme) => {
-    const theme = nextTheme === 'dark' ? Ligth : Dark;
-    Object.keys(theme).map((key) => {
-      const value = theme[key];
-      document.documentElement.style.setProperty(key, value);
-    });
-  };
+
   return (
     <div className={style.StepsContainer}>
       <div className={style.FisrtStep}>
-        <h1>{currentTheme === 'light' ? 'Light theme' : 'Dark theme'}</h1>
-        <button onClick={onClick}>Toggle</button>
         <div
           className={style.ProfileContainer}
           style={{
