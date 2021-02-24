@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import style from './FisrtStep.module.css';
 function FisrtStep() {
   const [firstStep, setfirstStep] = useState(true);
@@ -38,11 +39,13 @@ function FisrtStep() {
             <label className={style.Atribucion}>Fullstack developer</label>
           </div>
           <div className={style.ImageContainer}>
-            <img
+            <Image
               alt="FernandoTimo"
-              src="images/FernandoTimo.jpg"
+              src="/images/FernandoTimo.jpg"
               className={style.Image}
               onDoubleClick={handlerImage}
+              height={500}
+              width={500}
             />
           </div>
           <div

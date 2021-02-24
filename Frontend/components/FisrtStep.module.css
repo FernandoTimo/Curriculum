@@ -1,4 +1,4 @@
-.FisrtStep {
+.Steps .FisrtStep {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,9 +7,9 @@
   transition: 0.3s;
 }
 .ProfileContainer {
-  width: 30vh;
-  height: 30vh;
-  background: #fa0;
+  width: 50vh;
+  height: 50vh;
+  background: #fff;
   border-radius: 50%;
   display: flex;
   justify-content: flex-start;
@@ -24,13 +24,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden !important;
 }
-.Image {
-  /* width: 100%; */
-  /* height: 100%; */
+/* .Image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-}
+} */
 .InfoContainer {
   margin: 15vh;
   position: absolute;
