@@ -9,7 +9,7 @@
 .ProfileContainer {
   width: 50vh;
   height: 50vh;
-  background: #fff;
+  background: var(--color-surface);
   border-radius: 50%;
   display: flex;
   justify-content: flex-start;
