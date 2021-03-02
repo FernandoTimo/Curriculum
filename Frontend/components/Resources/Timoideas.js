@@ -445,26 +445,31 @@ export const Navigation = () => {
     </NavigationContextProvider>
   );
 };
+
 import Ligth from 'public/theme/Ligth.json';
 import Dark from 'public/theme/Dark.json';
 
 export function Themeas() {
-  const [currentTheme, setTheme] = useState('light');
+  const getCurrentTheme = () =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
+  useEffect(() => {
+    console.log(getCurrentTheme());
+    console.log(window.noFunca);
+    return;
+  }, []);
+  const [Theme, setTheme] = useState(false);
   const onClick = () => {
-    const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setTheme(nextTheme);
-    applyTheme(nextTheme);
-  };
-  const applyTheme = (nextTheme) => {
-    const theme = nextTheme === 'dark' ? Ligth : Dark;
-    Object.keys(theme).map((key) => {
-      const value = theme[key];
-      document.documentElement.style.setProperty(key, value);
+    setTheme(!Theme);
+    Object.keys(Theme ? Ligth : Dark).map((key) => {
+      document.documentElement.style.setProperty(
+        key,
+        Theme ? Ligth[key] : Dark[key]
+      );
     });
   };
   return (
     <span className="NavigationLabel" onClick={onClick}>
-      {currentTheme === 'light' ? '🌖' : '🌒'}
+      {Theme === 'light' ? '🌖' : '🌒'}
     </span>
   );
 }
