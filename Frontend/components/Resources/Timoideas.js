@@ -11,7 +11,7 @@ const randomBG = () => {
 // --- Global
 export function Body({ bg, children }) {
   return (
-    <div className='Body' style={{ background: bg ? randomBG() : '#fafafa' }}>
+    <div className='Body' style={{ background: bg ? randomBG() : 'var(_00_)' }}>
       {children}
     </div>
   );
@@ -22,8 +22,8 @@ export function Section({ bg, children, size }) {
     <section
       className='Section'
       style={{
-        background: bg ? randomBG() : Theme._00_,
-        color: Theme._20_,
+        background: bg ? randomBG() : 'var(_00_)',
+        color: 'var(_20_)',
         height: size ? `${size}00vh` : '100vh',
       }}
     >
@@ -54,7 +54,7 @@ export function Content({
         color: Theme._20,
         padding: padding ? padding + 'vh' : 0,
         flexDirection: row ? 'row' : 'column',
-        background: bg ? randomBG() : 'transparent',
+        background: bg ? randomBG() : 'var(_00_)',
         flex: flex || 1,
         ...style,
       }}
@@ -74,7 +74,7 @@ export function Header({ bg, padding, height, children, center }) {
         alignItems: center ? 'center' : 'start',
         padding: padding ? padding / 2 + 'vh' : 0,
         height: height ? height + 'vh' : '5vh',
-        background: bg ? randomBG() : '#fafafa',
+        background: bg ? randomBG() : 'var(_00_)',
       }}
     >
       {children}
@@ -92,7 +92,7 @@ export function Footer({ bg, padding, height, children, center }) {
         alignItems: center ? 'center' : 'start',
         padding: padding ? padding / 2 + 'vh' : 0,
         height: height ? height + 'vh' : '5vh',
-        background: bg ? randomBG() : Theme_00_,
+        background: bg ? randomBG() : 'var(_00_)',
       }}
     >
       {children}
